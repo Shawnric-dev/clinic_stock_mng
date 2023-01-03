@@ -1,0 +1,101 @@
+body{
+	background-color: #fff;
+	font-family: 'Roboto', sans-serif;
+	padding: 60px;
+}
+
+.hidden{
+	display: none;
+	background-color: black;
+}
+
+.registration-form{
+	display: none;
+}
+
+.main{
+	width: 300px;
+	background-color: #afd;
+	margin: 0 auto;
+	text-align: center;
+	padding: 15px;
+	border-radius: 10px;
+	border:1px solid #80ddcc;
+	box-shadow: 0px 0px 110px -55px #000;
+}
+
+.logo-text{
+	margin-bottom: 60px;
+}
+
+.form-input{
+	font-size: 16px;
+	padding: 10px; 
+	margin: 10px;
+	border:1px solid rgb(220,220,220);
+	border-radius: 6px;
+	width: 85%;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.button-holder{
+	margin-top: 30px;
+	text-align: right;
+}
+
+.button{
+	border-radius: 6px;
+	padding: 9px;
+	margin: 10px;
+	font-size: 19px;
+	transition: 0.5s;
+}
+
+.btn-register{
+	background-color: transparent;
+	border-color: transparent;
+	color: #000;
+	margin-right: -2px;
+}
+
+.btn-register:hover{	
+	color: #30aa2a;
+	font-size: 20px;
+}
+
+.btn-login{
+	background-color: #50ff50;
+	border:2px solid #50ee50;
+	color: #fff;
+}
+
+.btn-login:hover{
+	background-color: #20dd20;
+	border:2px solid #20dd20;
+}
+
+.btn-register_save{
+	background-color: #50a0ff;
+	border:2px solid #2060dd;
+	color: #fff;
+}
+
+.btn-register_save:hover{
+	background-color: #2060dd;
+}
+
+.water-mark{
+	text-decoration: none;
+	color: grey;
+	position: fixed;
+	bottom: 25px;
+	right: 30px;
+	transition: 0.3s;
+}
+
+.water-mark:hover{
+	color: #50ff50;
+}

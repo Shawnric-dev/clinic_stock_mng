@@ -1,0 +1,87 @@
+/*Extras... probably not replicable*/
+/*#btn_report_search, #slct_filter_report_time, .time_container{
+	height: 70px;
+}*/
+
+
+#slct_filter_report_time{
+	width: 110px;
+}
+
+.time_container{
+	width: 150px;	
+}
+
+#txt_filter_report_time{
+	margin: -3px;
+	border-width: 0px;
+}
+/*Extras... may be not replicable*/
+
+.form-row{
+	margin: 12px 0px 12px 0px;
+}
+
+.floating-action-btn{
+	position: fixed;
+	bottom: 40px;
+	right: -2px;
+	transition: 0.3s;
+	/*border-radius: 60px;*/
+	border-bottom-left-radius: 60px;
+	border-top-left-radius: 60px;
+	padding: 13px;
+}
+
+.floating-action-text{
+	display: none;
+	/*margin: 5px;*/
+	align-content: center;
+	font-size: 16px;
+}
+
+.floating-action-img{
+	width: 91%;
+	padding-left: 5px;
+}
+
+.floating-action-lbl{
+	position: fixed;
+	bottom: -4px;
+	right: -2px;
+	transition: 0.2s;
+	background-color: #dfd;
+	border-bottom-left-radius: 60px;
+	border-top-left-radius: 60px;
+	padding: 6px;
+	padding-left: 12px;
+	padding-right: 10px;
+	font-size: 17px;
+	height: 40px;
+}
+
+.panel_settings{
+	width: 600px;
+	padding: 30px;
+}
+
+/*Show loding gif start*/
+.overlay{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background: rgba(255,255,255,0.8) url("../resouces/imgs/Spinner-3.gif") center no-repeat;
+}
+
+body.loading{
+	overflow: hidden;
+}
+
+body.loading .overlay{
+	display: block;
+}
+/*Show loding gif end*/

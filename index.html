@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Clinic Inventory Management </title>
+	<meta charset="utf-8">
+
+	<link href="Assets/custom/front-end/css/style_boiler_plate_login.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="main">
+		<h2 class="logo-text">LOGIN</h2>
+		<form id="login_form" method="post" action="main.php">
+			<div class="login-form">
+				<input id="txt_user" class="form-input text-center" type="text" name="user_name" placeholder="Username">
+
+				<input id="txt_pass" class="form-input text-center" type="Password" name="password" placeholder="Password">
+
+				<div class="hidden">
+					<input id="txt_full_name" name="user_full_name">
+					<input id="txt_id" name="user_id">
+					<input id="txt_type" name="user_type">
+					<input id="txt_state" name="user_state">
+				</div>
+
+				<div class="button-holder">
+					<button id="btn_goto_register" class="button btn-register">Create account</button>
+					<!-- <button id="btn_login" class="button btn-login" style="width: 90px">Login</button> -->
+					<input id="btn_login" class="button btn-login" type="submit" style="width: 90px" value="Login">
+				</div>
+			</div>
+		</form>
+		<div class="registration-form">
+			<input id="txt_user_reg" class="form-input" type="text" name="user" placeholder="Username">
+
+			<input id="txt_pass_reg" class="form-input" type="password" name="password" placeholder="Password">
+
+			<input id="txt_user_name" class="form-input" type="text" name="user" placeholder="Full name">
+			
+			<div class="button-holder">
+				<button id="btn_goto_login" class="button btn-register">Back</button>
+				<button id="btn_register" class="button btn-login">Request registration</button>
+			</div>
+		</div>
+	</div>
+	<a class="water-mark" href="https://www.stockpropos.com">By. stockPro POS</a>
+
+	<script src="Assets/bootstrap-5.0.0/js/jquery-2.1.1.min.js"></script>
+	<script src="Assets/custom/front-end/js/login.js"></script>
+</body>
+</html>
