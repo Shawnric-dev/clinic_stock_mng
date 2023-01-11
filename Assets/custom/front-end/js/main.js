@@ -4,6 +4,8 @@ let gbl_userPass = '';
 let gbl_table_to_searchIn = 'table_company'; // Work on search feature
 let gbl_userType = 0;
 
+let gbl_rootUrl = '';
+
 
 // Used across all JS -------------------
 // let gbl_msg_success = "'Operation successful'";
