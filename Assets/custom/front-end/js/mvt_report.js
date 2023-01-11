@@ -7,7 +7,9 @@ function readMvts(timeInterval){
 	startLoadingAnim();
 
 	let formData = `time_interval=${timeInterval}`;
-	let url = 'Assets/custom/back-end/v1/movements/read.php';
+	
+// 	let url = 'Assets/custom/back-end/v1/movements/read.php';
+	let url = gbl_rootUrl+'/v1/movements/read.php';
 	$.post(url, formData, function(data, status){
 	
 		let dataObj = JSON.parse(data);
@@ -28,7 +30,9 @@ function readMovedItems(mvt){
 	startLoadingAnim();
 
 	let formData = `mvt_id=${mvt.mvt_id}`;
-	let url = 'Assets/custom/back-end/v1/movements/readMovedItems.php';
+	
+// 	let url = 'Assets/custom/back-end/v1/movements/readMovedItems.php';
+	let url = gbl_rootUrl+'/v1/movements/readMovedItems.php';
 	$.post(url, formData, function(data, status){
 	
 		let dataObj = JSON.parse(data);
