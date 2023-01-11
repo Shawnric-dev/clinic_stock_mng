@@ -62,8 +62,9 @@ function openTab(tabID, elmt){
 
 function getUserData(userName){
 	let formData = `user_name=${userName}`;	
-	let url = 'Assets/custom/back-end/v1/user/getUserData.php';
+	//let url = 'Assets/custom/back-end/v1/user/getUserData.php';
 
+	let url = gbl_rootUrl+'/v1/user/getUserData.php';
 	$.post(url, formData, function(data, status){
 
 		let dataObj = JSON.parse(data);
