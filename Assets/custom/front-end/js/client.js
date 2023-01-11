@@ -8,7 +8,8 @@ function createClient(client){
 	startLoadingAnim();
 	let formData = `name=${client.name}&&contact=${client.contact}&&email=${client.email}&&city=${client.city}&&addr=${client.address}`;
 	
-	let url = gbl_rootUrl;//'Assets/custom/back-end/v1/client/create.php';
+	// let url = gbl_rootUrl//'Assets/custom/back-end/v1/client/create.php';
+	let url = gbl_rootUrl+'/v1/client/create.php';
 	$.post(url, formData, function(data, status){
 
 		let dataObj = JSON.parse(data);
@@ -36,8 +37,9 @@ function createClient(client){
 function readClients(){
 	startLoadingAnim();
 
-	let formData = ``;
-	let url = gbl_rootUrl;//'Assets/custom/back-end/v1/client/read.php';
+	let formData = ``; 
+	//let url = gbl_rootUrl;//'Assets/custom/back-end/v1/client/read.php';
+	let url = gbl_rootUrl+'/v1/client/read.php';
 	$.post(url, formData, function(data, status){
 		
 		let dataObj = JSON.parse(data);
@@ -55,7 +57,8 @@ function updateClient(client){
 
 	let formData = `name=${client.name}&&contact=${client.contact}&&email=${client.email}&&city=${client.city}&&address=${client.address}&&id_=${client.id}`;
 
-	let url = gbl_rootUrl;//'Assets/custom/back-end/v1/client/update.php';
+	//let url = gbl_rootUrl;//'Assets/custom/back-end/v1/client/update.php';
+	let url = gbl_rootUrl+'/v1/client/update.php';
 	$.post(url, formData, function(data, status){
 		console.log(data);
 
@@ -92,8 +95,9 @@ function deleteClient(cID){
 	startLoadingAnim();
 
 	let formData = `id=${cID}`
-	let url = gbl_rootUrl;//'Assets/custom/back-end/v1/client/delete.php';
+	//let url = gbl_rootUrl;//'Assets/custom/back-end/v1/client/delete.php';
 
+	let url = gbl_rootUrl+'/v1/client/delete.php';
 	$.post(url, formData, function(data, status){
 
 		stopLoadingAnim();
