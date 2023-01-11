@@ -11,7 +11,8 @@ let cartItemsTotal=0;
 function readItemsMvt(){
 	startLoadingAnim();
 
-	let url = 'Assets/custom/back-end/v1/stock/read.php';
+// 	let url = 'Assets/custom/back-end/v1/stock/read.php';
+	let url = gbl_rootUrl+'/v1/stock/read.php';
 	$.post(url, '', function(data, status){
 
 		let dataObj = JSON.parse(data);
@@ -31,8 +32,8 @@ function makeMvt(mvtType, itemsList){
 	let paramJSON = JSON.stringify(params);
 	let formData = `mvt_type=${mvtType}&&operator_id=${gbl_userID}&&moved_items=${paramJSON}`;
 	
-	let url = 'Assets/custom/back-end/v1/movements/create.php';
-
+// 	let url = 'Assets/custom/back-end/v1/movements/create.php';
+	let url = gbl_rootUrl+'/v1/movements/create.php';
 	$.post(url, formData, function(data, status){
 		stopLoadingAnim();
 
