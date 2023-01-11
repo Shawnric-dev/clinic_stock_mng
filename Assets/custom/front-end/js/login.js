@@ -8,7 +8,9 @@
 			let pass = $('#txt_pass').val();
 			let formData = `user_name=${user}&&pass=${pass}`;
 
-			$.post('Assets/custom/back-end/v1/user/login.php', formData, function(data, status){
+			
+			let url = gbl_rootUrl+'/v1/user/login.php'; 
+			$.post(url, formData, function(data, status){
 				let dataObj = JSON.parse(data);
 				
 				// get id->get user typeS
@@ -44,7 +46,9 @@
 			let formData = `user_name=${user_name}&&pass=${user_pass}&&full_name=${user_full_name}&&type=${type}&&state=${state}`;
 
 			startLoadingAnim();
-			$.post('Assets/custom/back-end/v1/user/create.php', formData, function(data, status){
+			
+			let url = gbl_rootUrl+'/v1/user/create.php';
+			$.post(url, formData, function(data, status){
 
 				let dataObj = JSON.parse(data);
 				let id = dataObj['id'];
