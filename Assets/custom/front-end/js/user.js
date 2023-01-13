@@ -12,7 +12,7 @@ function createUser(user){
 	startLoadingAnim();
 	let formData = `user_name=${user.user_name}&&pass=${user.pass}&&full_name=${user.full_name}&&contact=${user.contact}&&type=${user.type}&&state=${user.state}`;
 
-	let url = 'Assets/custom/back-end/v1/user/create.php';
+	let url = gbl_rootUrl+'/v1/user/create.php';
 	$.post(url, formData, function(data, status){
 		stopLoadingAnim();
 
@@ -47,7 +47,7 @@ function readUsers(type){
 
 	let formData = `type=${type}&&state=${state}`;
 	
-	let url = 'Assets/custom/back-end/v1/user/readUsers.php';
+	let url = gbl_rootUrl+'/v1/user/readUsers.php';
 	$.post(url, formData, function(data, status){
 
 		let dataObj = JSON.parse(data);
@@ -64,7 +64,7 @@ function updateUser(user){
 	startLoadingAnim();
 	let formData = `user_id=${user.id}&&pass=${user.pass}&&full_name=${user.full_name}&&contact=${user.contact}&&type=${user.type}`;
 
-	let url = 'Assets/custom/back-end/v1/user/update.php';
+	let url = gbl_rootUrl+'/v1/user/update.php';
 	$.post(url, formData, function(data, status){
 
 		let dataObj = JSON.parse(data);
@@ -106,7 +106,7 @@ function updateUserState(state, uID){
 
 	let formData = `user_id=${uID}&&state=${state}`;
 
-	let url = 'Assets/custom/back-end/v1/user/updateState.php';
+	let url = gbl_rootUrl+'/v1/user/updateState.php';
 	$.post(url, formData, function(data, status){
 		stopLoadingAnim();
 
@@ -131,7 +131,7 @@ function deleteUser(uID){
 
 	let formData = `user_id=${uID}`;
 
-	let url = 'Assets/custom/back-end/v1/user/delete.php';
+	let url = gbl_rootUrl+'/v1/user/delete.php';
 	$.post(url, formData, function(data, status){
 		stopLoadingAnim();
 
