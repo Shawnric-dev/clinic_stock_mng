@@ -4,7 +4,7 @@ function updateUserPass(id, newPass){
 
 	let formData = `id=${id}&&pass=${newPass}`;
 
-	let url = 'Assets/custom/back-end/v1/user/updatePass.php';
+	let url = gbl_rootUrl+'/v1/user/updatePass.php';
 	$.post(url, formData, function(data, status){
 		stopLoadingAnim();
 
