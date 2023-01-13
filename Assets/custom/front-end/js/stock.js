@@ -10,7 +10,7 @@ function createItem(item){
 	startLoadingAnim();
 	let formData = `barcode=${item.barcode}&&description=${item.description}&&category=${item.category}&&qty=${item.qty}`;
 
-	let url = 'Assets/custom/back-end/v1/stock/create.php';
+	let url = gbl_rootUrl+'/v1/stock/create.php';
 	$.post(url, formData, function(data, status){
 		stopLoadingAnim();
 
@@ -50,7 +50,7 @@ function readItems(){
 	//let formData = `type=${type}&&state=${state}`;
 	startLoadingAnim();
 	
-	let url = 'Assets/custom/back-end/v1/stock/read.php';
+	let url = gbl_rootUrl+'/v1/stock/read.php';
 	$.post(url, '', function(data, status){
 
 		let dataObj = JSON.parse(data);
@@ -68,7 +68,7 @@ function updateItem(item){
 
 	let formData = `id=${item.id}&&barcode=${item.barcode}&&description=${item.description}&&category=${item.category}`;
 
-	let url = 'Assets/custom/back-end/v1/stock/update.php';
+	let url = gbl_rootUrl+'/v1/stock/update.php';
 	$.post(url, formData, function(data, status){
 		stopLoadingAnim();
 
@@ -129,7 +129,7 @@ function deleteItem(uID){
 
 	let formData = `id=${uID}`;
 
-	let url = 'Assets/custom/back-end/v1/stock/delete.php';
+	let url = gbl_rootUrl+'/v1/stock/delete.php';
 	$.post(url, formData, function(data, status){
 		stopLoadingAnim();
 
